@@ -1,0 +1,225 @@
+body {
+
+    height: 100vh;
+    margin: 0;
+    background-color: #40c561;
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/07/14/03/japan-1805865_1280.jpg);
+    background-size: cover; /* 100% */
+    background-position: center; /* centre */
+    background-repeat: no-repeat; 
+    overflow: hidden; /* Stop Scroll */
+    text-decoration: none;
+}
+
+.search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.search-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #03030363;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.493);
+    backdrop-filter: blur(9px);
+    border-radius: 13px;
+    border: 1px solid #00000050;
+}
+.center-search {
+    
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    width: 320px;
+}
+
+.title-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+  gap: 55px; /* Abstand zwischen den Elementen */
+  padding-left: 55px; /* Abstand zum Bildschirmrand */
+  padding-right: 55px; /* Abstand zum Bildschirmrand */
+  padding-bottom: 21px; /* Abstand zum Bildschirmrand */
+  padding-top: 33px; /* Abstand zum Bildschirmrand */
+  max-width: 900px; /* Maximale Breite des Containers */
+  margin: 0 auto; /* Zentriert den Container horizontal */
+  box-sizing: border-box; /* Inklusive Padding und Border in der Breite */
+
+}
+
+.space {
+  padding-bottom: 13em;
+}
+
+h1.title {
+  font-weight: bold;
+  color: #fffffff1;
+  font-size: 2em;
+  text-shadow: 2px 2px 11px rgba(12, 12, 12, 0.747);
+  opacity: 0;
+}
+
+
+.quicklinks-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Zwei Spalten */
+    gap: 55px; /* Abstand zwischen den Elementen */
+    padding-left: 55px; /* Abstand zum Bildschirmrand */
+    padding-right: 55px; /* Abstand zum Bildschirmrand */
+    padding-bottom: 55px; /* Abstand zum Bildschirmrand */
+    padding-top: 33px; /* Abstand zum Bildschirmrand */
+    max-width: 900px; /* Maximale Breite des Containers */
+    margin: 0 auto; /* Zentriert den Container horizontal */
+    box-sizing: border-box; /* Inklusive Padding und Border in der Breite */
+  }
+  
+  /* Stile für einzelne Quicklinks */
+  .quicklink {
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    transform: translateY(20px); /* Startet leicht nach unten verschoben */
+    transition: background-color 0.3s ease;
+    opacity: 0; /* Unsichtbar am Anfang */
+
+    background-color: #03030363;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.493);
+    backdrop-filter: blur(5px);
+    border-radius: 13px;
+    border: 1px solid #00000050;
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  .quicklink:hover {
+    background-color: #0000008a;
+  }
+  
+  /* Responsive Verhalten: Bei kleineren Bildschirmen einspaltig */
+  @media (max-width: 600px) {
+    .quicklinks-container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+/*
+  .quicklink .icon {
+    margin-right: 8px; 
+    width: 1em;
+    height: 1em;
+    vertical-align: baseline;
+}
+*/
+
+
+
+.quicklink .icon {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    margin-right: 0.3em; /* Abstand zum Text */
+}
+
+
+
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+#searchInput {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #00000050;
+    background-color: #00000085;
+    color: aliceblue;
+    border-radius: 99px;
+    margin-right: 20px;
+}
+
+/* Stil für den Suchbutton */
+button {
+    padding: 8px 16px;
+    background-color: #00000085;
+    border: 1px solid #00000050;
+    color: white;
+    border-radius: 99px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    border-radius: 5px;
+    transition: all 0.9s ease; /* Alle Eigenschaften mit einer Transition versehen */
+}
+    
+
+
+
+
+
+footer {
+    color: #ffffff63;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    padding: 3px;
+    box-shadow: 1px 16px 34px -7px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 1px 16px 34px -7px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 16px 34px -7px rgba(0,0,0,0.3);
+
+}
+
+footer a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+
+
+
+
+
+/* Grundstil des Divs */
+.container {
+    transition: all 0.6s ease; /* Übergangseffekt */
+
+    border-radius: 13px;
+}

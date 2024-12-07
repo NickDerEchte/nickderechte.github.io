@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-CH">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Starpage</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+
+<div class="space">
+
+</div>
+
+<div class="search-div">
+    <div class="container" id="animatedDiv">
+    <div class="search-all">
+    <h1>Google Search</h1>
+<div class="center-search">
+    <input type="text" id="searchInput" placeholder="Type here..." >
+    <button onclick="searchGoogle()">Search</button>
+
+    <script>
+        function searchGoogle() {
+            const query = document.getElementById("searchInput").value;
+            if (query) {
+                window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            }
+        }
+
+        // Event Listener Search
+        document.getElementById("searchInput").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                searchGoogle();
+            }
+        });
+    </script>
+</div>
+
+
+</div>
+</div>
+
+
+
+</div>
+<br>
+<div class="title-container">
+<h1 class="title">Quicklinks</h1></div>
+<div class="quicklinks-container">
+    <a href="https://open.spotify.com/"><div class="quicklink"><img src="res/spotify-white-icon.svg" alt="White Spotify Logo"> Spotify</div></a>
+
+    <a href="https://youtube.com/"><div class="quicklink"><img src="res/youtube-app-white-icon.svg" alt="White YouTube Logo"> YouTube</div></a>
+
+
+
+    <div class="quicklink">Link 3</div>
+    <div class="quicklink">Link 4</div>
+    <!-- Weitere Links können hier hinzugefügt werden -->
+  </div>
+
+<!--
+<script>
+    //QUICKLINK FADE IN ANIMATION
+    document.addEventListener("DOMContentLoaded", () => {
+  const quicklinks = document.querySelectorAll(".quicklink");
+
+  quicklinks.forEach((element, index) => {
+    // Verzögert die Animation für jedes Element
+    setTimeout(() => {
+      element.style.animation = "fadeInUp 0.6s ease forwards";
+    }, index * 200); // 200ms Verzögerung zwischen den einzelnen Quicklinks
+  });
+});
+
+
+
+
+</script>
+-->
+
+<script>
+    // QUICKLINK FADE IN ANIMATION
+document.addEventListener("DOMContentLoaded", () => {
+  const quicklinks = document.querySelectorAll(".quicklink, h1.title, .search-all");
+
+  quicklinks.forEach((element, index) => {
+    // Verzögert die Animation für jedes Element
+    setTimeout(() => {
+      element.style.animation = "fadeInUp 0.6s ease forwards";
+    }, index * 200); // 200ms Verzögerung zwischen den einzelnen Elementen
+  });
+});
+</script>
+
+
+
+
+<!--
+<script>
+    // Fügt die "show"-Klasse nach einer kurzen Verzögerung hinzu
+    window.addEventListener("load", function() {
+        const container = document.getElementById("animatedDiv");
+        setTimeout(() => {
+            container.classList.add("show");
+        }, 100); // Verzögerung von 100ms für den Effekt
+    });
+</script>
+-->
+
+
+<script src="script.js"></script>
+</body>
+<footer>
+    (c) Nick Figner 2024 | <a href="https://www.figner.nickfigner.com">A Figner Project.</a> | <a href="https://github.com/NickDerEchte/starpage">GitHub</a> | <a href="https://www.nickfigner.com">Website</a> | <a href="https://www.buymeacoffee.com/nickdesigns">Donate</a>
+</footer>
+</html>
